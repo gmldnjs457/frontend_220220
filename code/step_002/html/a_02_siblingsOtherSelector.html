@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!-- a_02_siblingsOtherSelector.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="../css/common/common.css" />
+  <link rel="stylesheet" href="../css/common/reset.css" />
+  <link rel="stylesheet" href="../css/src/a_02_siblingsOtherSelector.css">
+  <title>기타 다양한 선택자</title>
+</head>
+<body>
+  <div id="wrap">
+    <h1><a href="./content.html">웹표준</a></h1>
+    <div class="container">
+      <h2>형제 선택자</h2>
+      <ul class="siblings_01">
+        <li>list_01</li>
+        <li>list_02</li>
+        <li>list_03</li>
+        <li>list_04</li>
+      </ul> <!-- // .siblings_01 -->
+
+      <dl class="siblings_02">
+        <dt>title</dt>
+        <dd>Lorem ipsum dolor sit amet.</dd>
+        <dd>Lorem ipsum dolor sit amet consectetur.</dd>
+        <dd>Lorem, ipsum dolor sit amet consectetur adipisicing.</dd>
+
+        <dt>title</dt>
+        <dd>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</dd>
+        <dd>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse!</dd>
+
+        <dt>title</dt>
+        <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, explicabo!</dd>
+        <dd>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores, voluptatem consectetur?</dd>
+        <dd>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse molestias culpa blanditiis?</dd>
+      </dl> <!-- // .siblings_02 -->
+
+      <dl class="siblings_03">
+        <!-- dt:dd = 1:1 -->
+        <dt>title</dt>
+        <dd>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem, illum!</dd>
+
+        <dt>title</dt>
+        <dd>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem, illum!</dd>
+
+        <dt>title</dt>
+        <dd>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem, illum!</dd>
+      </dl> <!-- // .siblings_03 -->
+
+    </div> <!-- // .container -->
+
+    <div class="container">
+      <h2>속성선택자</h2>
+      <p class="select">최신 브라우저 설치 
+        <a href="https://google.com/chrome">크롬 브라우저</a>
+        <a href="https://whale.naver.com">네이버 웨일</a>
+      </p>
+    </div> <!-- // .container -->
+
+  </div> <!-- // #wrap -->
+
+
+</body>
+</html>
