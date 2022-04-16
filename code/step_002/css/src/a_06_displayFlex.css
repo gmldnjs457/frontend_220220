@@ -1,0 +1,141 @@
+@charset "UTF-8";
+/* a_06_displayFlex.css */
+
+h1, h2 {margin: 0;}
+ul {list-style: none; margin: 0; padding: 0;}
+
+#wrap {
+  width: 90%; height: auto;
+  margin: auto; padding-bottom: 500px; 
+  border: 1px solid #555;
+}
+
+.part {
+  width: 100%; height: auto;
+  padding: 10px; box-sizing: border-box; 
+  background-color: #ddf;
+}
+
+.part ul { 
+  width: 100%; height: auto;
+  border: 1px solid #f06; box-sizing: border-box;
+}
+
+.part li {
+  width: 100px; height: 100px;
+  background-color: #adf;
+  background-image: linear-gradient(45deg, #acf, #fdf);
+}
+
+/* --------------------------------------------------------- */
+
+p {background-color: #ddd;}
+p > img {float: left; margin-right: 10px;}
+p:after, p::after { content: ""; display: block; clear: both;}
+
+/* ------------------------------------------------------------- */
+
+.float > li {float: left; margin-left: 20px;}
+.float > li:first-child {margin-left: 0;}
+.float:after ,
+.float::after {content: ""; display: block; width: 100%; height: 0; clear: both;}
+
+/* ---------------------------------------------------------- */
+
+.flex_01 { display: flex;}
+.flex_01 li {margin-left: 20px;}
+.flex_01 li:first-child {margin-left: 0;}
+
+/* ------------------------------------------------------------- */
+
+.part .flex_02 {
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* -------------------------------------------------------------- */
+
+.float_02 {
+  position: relative;
+  background-color: #add;
+}
+.float_02:after , .float_02::after {content: ""; display: block; clear: both;}
+.float_02 li:first-child {float: left;}
+.float_02 li:nth-child(2) {position: absolute; left: 0; right: 0; top: 0; margin: auto;}
+.float_02 li:last-child {float: right;}
+
+/* ----------------------------------------------------------------- */
+
+@supports (display: flex) {
+  .float_02 {display: flex; justify-content: space-between;}
+  .float_02 li {float: none;}
+  .float_02 li:nth-child(2) {position: static;}
+}
+
+/* ------------------------------------------------------------------ */
+
+.part .flex_03 {
+  width: 800px; height: 600px;
+  display: flex;
+  flex-wrap: wrap; /*넘치는 부분 처리, 디폴트는 no-wrap*/
+  flex-direction: row;
+  justify-content: flex-end; 
+  align-content: space-between; /* 2줄 이상일 때 서브축 정렬 */
+}
+
+.part .flex_04 {
+  display: flex;
+  flex-direction:row;
+  justify-content: flex-start;
+  width: 600px; height: 400px;
+  align-content: center; /*한 줄일 땐 서브축 정렬 align-content으로 안먹음!*/
+  align-items: center; /*한 줄일 땐 서브축 정렬 align-items! 특히나 텍스트 정렬할 때 자주 씀*/
+}
+
+.flex_04 > li {  
+  margin: 0 10px;
+  text-align: center;
+}
+
+.flex_04 > li:nth-child(1){line-height: 100px;} /*두 줄 이상은 못 씀*/
+.flex_04 > li:nth-child(2){padding-top: 38px; box-sizing: border-box;} /*두 줄 이상은 못 씀*/
+.flex_04 > li:nth-child(3) {position: relative;}
+.flex_04 > li:nth-child(3)> span {
+  display: block;
+  position: absolute; top: 0; bottom: 0; left: 0;
+  width: 100%; height: 0; 
+  margin: auto;
+  text-align: center;
+}
+
+.flex_04 > li:nth-child(3) i {
+  display: block; width: 100%; height: auto;
+  font-style: normal;
+  transform: translateY(-50%); /* 핵심 키워드 */
+  background-color: #fff;
+}
+
+.flex_04 li:nth-child(4) {
+  display: flex;
+}
+
+.flex_04 > li a {
+  display: flex; 
+  justify-content: center;
+  align-items:center;
+  width: 100%; height: 100%;
+}
+
+.flex_05 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.flex_05 li:first-child {order: 2;}
+.flex_05 li:nth-child(2) {order: -999;}
+
+
+/* 크로스 브라우징 처리 유념!! */
