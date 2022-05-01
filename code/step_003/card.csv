@@ -1,0 +1,11 @@
+key,title,content,href,image,url
+1,title_01,content_001,https://naver.com,img_01.png,../img/card/
+2,title_02,content_002,#,img_02.png,../img/card/
+3,title_03,content_003,https://google.com,img_03.png,../img/card/
+4,title_04,content_004,#,img_04.png,../img/card/
+5,title_05,content_005,https://daum.net,img_05.png,../img/card/
+6,title_06,content_006,https://unsplash.com,img_06.png,../img/card/
+7,title_07,content_007,#,img_07.png,../img/card/
+8,title_08,content_008,#,img_08.png,../img/card/
+9,title_09,content_009,#,img_09.png,../img/card/
+10,title_10,content_010,#,img_10.png,../img/card/
